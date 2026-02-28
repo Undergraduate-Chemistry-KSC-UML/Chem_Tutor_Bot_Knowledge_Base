@@ -1,0 +1,670 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>Coupled Equilibria - Instructional Material</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#coupled-equilibria" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Instructional Material" class="md-header__button md-logo" aria-label="Instructional Material" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Instructional Material
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Coupled Equilibria
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Instructional Material" class="md-nav__button md-logo" aria-label="Instructional Material" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Instructional Material
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Periodic_Table/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Periodic Table
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CHEM1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CHEM1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CHEM1/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CHEM2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CHEM2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#example-1515-increased-solubility-in-acidic-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 15.15: Increased Solubility in Acidic Solutions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-1516-multiple-equilibria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 15.16: Multiple Equilibria
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="coupled-equilibria">Coupled Equilibria</h1>
+<p>As discussed in preceding chapters on equilibrium, coupled equilibria involve two or more separate chemical reactions that share one or more reactants or products. This section of this chapter will address solubility equilibria coupled with acid-base and complex-formation reactions.</p>
+<p>An environmentally relevant example illustrating the coupling of solubility and acid-base equilibria is the impact of ocean acidification on the health of the ocean’s coral reefs. These reefs are built upon skeletons of sparingly soluble calcium carbonate excreted by colonies of corals (small marine invertebrates). The relevant dissolution equilibrium is</p>
+<p>[
+\text{CaCO}<em>3(s) \rightleftharpoons \text{Ca}^{2+}(aq) + \text{CO}_3^{2-}(aq) \quad K</em>{sp} = 8.7 \times 10^{-9}
+]</p>
+<p>Rising concentrations of atmospheric carbon dioxide contribute to an increased acidity of ocean waters due to the dissolution, hydrolysis, and acid ionization of carbon dioxide:</p>
+<p>[
+\text{CO}_2(g) \rightleftharpoons \text{CO}_2(aq)
+]</p>
+<p>[
+\text{CO}_2(aq) + \text{H}_2\text{O}(l) \rightleftharpoons \text{H}_2\text{CO}_3(aq)
+]</p>
+<p>[
+\text{H}<em>2\text{CO}_3(aq) + \text{H}_2\text{O}(l) \rightleftharpoons \text{HCO}_3^{-}(aq) + \text{H}_3\text{O}^+(aq) \quad K</em>{a1} = 4.3 \times 10^{-7}
+]</p>
+<p>[
+\text{HCO}<em>3^{-}(aq) + \text{H}_2\text{O}(l) \rightleftharpoons \text{CO}_3^{2-}(aq) + \text{H}_3\text{O}^+(aq) \quad K</em>{a2} = 4.7 \times 10^{-11}
+]</p>
+<p>Inspection of these equilibria shows the carbonate ion is involved in the calcium carbonate dissolution and the acid hydrolysis of bicarbonate ion. Combining the dissolution equation with the reverse of the acid hydrolysis equation yields</p>
+<p>[
+\text{CaCO}<em>3(s) + \text{H}_3\text{O}^+(aq) \rightleftharpoons \text{Ca}^{2+}(aq) + \text{HCO}_3^{-}(aq) + \text{H}_2\text{O}(l) \quad K = \frac{K</em>{sp}}{K_{a2}} = 180
+]</p>
+<p>The equilibrium constant for this net reaction is much greater than the $K_{sp}$ for calcium carbonate, indicating its solubility is markedly increased in acidic solutions. As rising carbon dioxide levels in the atmosphere increase the acidity of ocean waters, the calcium carbonate skeletons of coral reefs become more prone to dissolution and subsequently less healthy.</p>
+<p>The dramatic increase in solubility with increasing acidity described above for calcium carbonate is typical of salts containing basic anions (e.g., carbonate, fluoride, hydroxide, sulfide). Another familiar example is the formation of dental cavities in tooth enamel. The major mineral component of enamel is calcium hydroxyapatite, a sparingly soluble ionic compound whose dissolution equilibrium is</p>
+<p>[
+\text{Ca}_5(\text{PO}_4)_3\text{OH}(s) \rightleftharpoons 5 \text{Ca}^{2+}(aq) + 3 \text{PO}_4^{3-}(aq) + \text{OH}^-(aq)
+]</p>
+<p>This compound dissolves to yield two different basic ions: triprotic phosphate ions</p>
+<p>[
+\text{PO}_4^{3-}(aq) + \text{H}_3\text{O}^+(aq) \rightarrow \text{H}_2\text{PO}_4^{2-}(aq) + \text{H}_2\text{O}(l)
+]</p>
+<p>[
+\text{H}_2\text{PO}_4^{2-}(aq) + \text{H}_3\text{O}^+(aq) \rightarrow \text{H}_2\text{PO}_4^{-}(aq) + \text{H}_2\text{O}(l)
+]</p>
+<p>[
+\text{H}_2\text{PO}_4^{-}(aq) + \text{H}_3\text{O}^+(aq) \rightarrow \text{H}_3\text{PO}_4(aq) + \text{H}_2\text{O}(l)
+]</p>
+<p>and monoprotic hydroxide ions:</p>
+<p>[
+\text{OH}^-(aq) + \text{H}_3\text{O}^+ \rightarrow 2 \text{H}_2\text{O}
+]</p>
+<p>Of the two basic productions, the hydroxide is, of course, by far the stronger base (it’s the strongest base that can exist in aqueous solution), and so it is the dominant factor providing the compound an acid-dependent solubility. Dental cavities form when the acid waste of bacteria growing on the surface of teeth hastens the dissolution of tooth enamel by reacting completely with the strong base hydroxide, shifting the hydroxyapatite solubility equilibrium to the right. Some toothpastes and mouth rinses contain added NaF or SnF$_2$ that make enamel more acid resistant by replacing the strong base hydroxide with the weak base fluoride:</p>
+<p>[
+\text{NaF} + \text{Ca}_5(\text{PO}_4)_3\text{OH} \rightleftharpoons \text{Ca}_5(\text{PO}_4)_3\text{F} + \text{Na}^+ + \text{OH}^-
+]</p>
+<p>The weak base fluoride ion reacts only partially with the bacterial acid waste, resulting in a less extensive shift in the solubility equilibrium and an increased resistance to acid dissolution.</p>
+<p>The solubility of ionic compounds may also be increased when dissolution is coupled to the formation of a complex ion. For example, aluminum hydroxide dissolves in a solution of sodium hydroxide or another strong base because of the formation of the complex ion $\text{Al(OH)}_4^-$.</p>
+<p>The equations for the dissolution of aluminum hydroxide, the formation of the complex ion, and the combined (net) equation are shown below. As indicated by the relatively large value of $K$ for the net reaction, coupling complex formation with dissolution drastically increases the solubility of Al(OH)$_3$.</p>
+<p>[
+\text{Al(OH)}<em>3(s) \rightleftharpoons \text{Al}^{3+}(aq) + 3 \text{OH}^-(aq) \quad K</em>{sp} = 2 \times 10^{-32}
+]</p>
+<p>[
+\text{Al}^{3+}(aq) + 4 \text{OH}^-(aq) \rightleftharpoons \text{Al(OH)}_4^-(aq) \quad K_f = 1.1 \times 10^{33}
+]</p>
+<p>Net:</p>
+<p>[
+\text{Al(OH)}<em>3(s) + \text{OH}^-(aq) \rightleftharpoons \text{Al(OH)}_4^-(aq) \quad K = K</em>{sp} K_f = 22
+]</p>
+<h2 id="example-1515-increased-solubility-in-acidic-solutions">Example 15.15: Increased Solubility in Acidic Solutions</h2>
+<p>Compute and compare the molar solubilities for aluminum hydroxide, Al(OH)$_3$, dissolved in (a) pure water and (b) a buffer containing 0.100 M acetic acid and 0.100 M sodium acetate.</p>
+<p><strong>Solution</strong></p>
+<p>(a) The molar solubility of aluminum hydroxide in water is computed considering the dissolution equilibrium only as demonstrated in several previous examples:</p>
+<p>[
+\text{Al(OH)}<em>3(s) \rightleftharpoons \text{Al}^{3+}(aq) + 3 \text{OH}^-(aq) \quad K</em>{sp} = 2 \times 10^{-32}
+]</p>
+<p>molar solubility in water = $[\text{Al}^{3+}] = \left(\frac{2 \times 10^{-32}}{27}\right)^{1/4} = 5 \times 10^{-9} \, M$</p>
+<p>(b) The concentration of hydroxide ion of the buffered solution is conveniently calculated by the Henderson-Hasselbalch equation:</p>
+<p>[
+pH = pK_a + \log \frac{[\text{CH}_3\text{COO}^-]}{[\text{CH}_3\text{COOH}]}
+]</p>
+<p>[
+pH = 4.74 + \log \frac{0.100}{0.100} = 4.74
+]</p>
+<p>At this pH, the concentration of hydroxide ion is</p>
+<p>[
+pOH = 14.00 - 4.74 = 9.26
+]</p>
+<p>[
+[\text{OH}^-] = 10^{-9.26} = 5.5 \times 10^{-10}
+]</p>
+<p>The solubility of Al(OH)$_3$ in this buffer is then calculated from its solubility product expressions:</p>
+<p>[
+K_{sp} = [\text{Al}^{3+}][\text{OH}^-]^3
+]</p>
+<p>molar solubility in buffer = $[\text{Al}^{3+}] = \frac{K_{sp}}{[\text{OH}^-]^3} = \frac{2 \times 10^{-32}}{(5.5 \times 10^{-10})^3} = 1.2 \times 10^{-4} \, M$</p>
+<p>Compared to pure water, the solubility of aluminum hydroxide in this mildly acidic buffer is approximately ten million times greater (though still relatively low).</p>
+<p><strong>Check Your Learning</strong></p>
+<p>What is the solubility of aluminum hydroxide in a buffer comprised of 0.100 M formic acid and 0.100 M sodium formate?</p>
+<p><strong>Answer:</strong> 0.1 M</p>
+<h2 id="example-1516-multiple-equilibria">Example 15.16: Multiple Equilibria</h2>
+<p>Unexposed silver halides are removed from photographic film when they react with sodium thiosulfate (Na$_2$S$_2$O$_3$, called hypo) to form the complex ion $\text{Ag(S}_2\text{O}_3)_2^{3-}$ ($K_f = 4.7 \times 10^{13}$).</p>
+<p>What mass of Na$_2$S$_2$O$_3$ is required to prepare 1.00 L of a solution that will dissolve 1.00 g of AgBr by the formation of $\text{Ag(S}_2\text{O}_3)_2^{3-}$?</p>
+<p><strong>Solution</strong></p>
+<p>Two equilibria are involved when silver bromide dissolves in an aqueous thiosulfate solution containing the S$_2$O$_3^{2-}$ ion:</p>
+<p>dissolution:</p>
+<p>[
+\text{AgBr}(s) \rightleftharpoons \text{Ag}^+(aq) + \text{Br}^-(aq) \quad K_{sp} = 5.0 \times 10^{-13}
+]</p>
+<p>complexation:</p>
+<p>[
+\text{Ag}^+(aq) + 2 \text{S}_2\text{O}_3^{2-}(aq) \rightleftharpoons \text{Ag(S}_2\text{O}_3)_2^{3-}(aq) \quad K_f = 4.7 \times 10^{13}
+]</p>
+<p>Combining these two equilibrium equations yields</p>
+<p>[
+\text{AgBr}(s) + 2 \text{S}_2\text{O}_3^{2-}(aq) \rightleftharpoons \text{Ag(S}_2\text{O}_3)_2^{3-}(aq) + \text{Br}^-(aq)
+]</p>
+<p>[
+K = \frac{[\text{Ag(S}<em>2\text{O}_3)_2^{3-}][\text{Br}^-]}{[\text{S}_2\text{O}_3^{2-}]^2} = K</em>{sp} K_f = 24
+]</p>
+<p>The concentration of bromide resulting from dissolution of 1.00 g of AgBr in 1.00 L of solution is</p>
+<p>[
+[\text{Br}^-] = \frac{1.00 \, g \, \text{AgBr} \times \frac{1 \, mol \, \text{AgBr}}{187.77 \, g/mol} \times \frac{1 \, mol \, \text{Br}^-}{1 \, mol \, \text{AgBr}}}{1.00 \, L} = 0.00532 \, M
+]</p>
+<p>The stoichiometry of the dissolution equilibrium indicates the same concentration of aqueous silver ion will result, 0.00532 M, and the very large value of $K_f$ ensures that essentially all the dissolved silver ion will be complexed by thiosulfate ion:</p>
+<p>[
+[\text{Ag(S}_2\text{O}_3)_2^{3-}] = 0.00532 \, M
+]</p>
+<p>Rearranging the $K$ expression for the combined equilibrium equations and solving for the concentration of thiosulfate ion yields</p>
+<p>[
+[\text{S}_2\text{O}_3^{2-}] = \sqrt{\frac{[\text{Ag(S}_2\text{O}_3)_2^{3-}][\text{Br}^-]}{K}} = \sqrt{\frac{(0.00532)(0.00532)}{24}} = 0.0011 \, M
+]</p>
+<p>Finally, the total mass of Na$_2$S$_2$O$_3$ required to provide enough thiosulfate to yield the concentrations cited above can be calculated.</p>
+<p>Mass of Na$_2$S$_2$O$_3$ required to yield 0.00532 M $\text{Ag(S}_2\text{O}_3)_2^{3-}$:</p>
+<p>[
+0.00532 \, mol \, \text{Ag(S}_2\text{O}_3)_2^{3-} \times \frac{1.00 \, L}{1} \times \frac{2 \, mol \, \text{S}_2\text{O}_3^{2-}}{1 \, mol \, \text{Ag(S}_2\text{O}_3)_2^{3-}} \times \frac{1 \, mol \, \text{Na}_2\text{S}_2\text{O}_3}{1 \, mol \, \text{S}_2\text{O}_3^{2-}} \times \frac{158.1 \, g \, \text{Na}_2\text{S}_2\text{O}_3}{1 \, mol \, \text{Na}_2\text{S}_2\text{O}_3} = 1.68 \, g
+]</p>
+<p>Mass of Na$_2$S$_2$O$_3$ required to yield 0.00110 M $\text{S}_2\text{O}_3^{2-}$:</p>
+<p>[
+0.0011 \, mol \, \text{S}_2\text{O}_3^{2-} \times \frac{1.00 \, L}{1} \times \frac{1 \, mol \, \text{Na}_2\text{S}_2\text{O}_3}{1 \, mol \, \text{S}_2\text{O}_3^{2-}} \times \frac{158.1 \, g \, \text{Na}_2\text{S}_2\text{O}_3}{1 \, mol \, \text{Na}_2\text{S}_2\text{O}_3} = 0.17 \, g
+]</p>
+<p>The mass of Na$_2$S$_2$O$_3$ required to dissolve 1.00 g of AgBr in 1.00 L of water is thus 1.68 g + 0.17 g = 1.85 g.</p>
+<p><strong>Check Your Learning</strong></p>
+<p>AgCl(s), silver chloride, has a very low solubility:</p>
+<p>[
+\text{AgCl}(s) \rightleftharpoons \text{Ag}^+(aq) + \text{Cl}^-(aq), \quad K_{sp} = 1.6 \times 10^{-10}
+]</p>
+<p>Adding ammonia significantly increases the solubility of AgCl because a complex ion is formed:</p>
+<p>[
+\text{Ag}^+(aq) + 2 \text{NH}_3(aq) \rightleftharpoons \text{Ag(NH}_3)_2^+(aq), \quad K_f = 1.7 \times 10^7
+]</p>
+<p>What mass of NH$_3$ is required to prepare 1.00 L of solution that will dissolve 2.00 g of AgCl by formation of $\text{Ag(NH}_3)_2^+$?</p>
+<p><strong>Answer:</strong> 1.00 L of a solution prepared with 5.0 g NH$_3$ dissolves 2.0 g of AgCl.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

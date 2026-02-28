@@ -1,0 +1,1364 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>Equilibrium Calculations - Instructional Material</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#equilibrium-calculations" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Instructional Material" class="md-header__button md-logo" aria-label="Instructional Material" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Instructional Material
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Equilibrium Calculations
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Instructional Material" class="md-nav__button md-logo" aria-label="Instructional Material" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Instructional Material
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Periodic_Table/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Periodic Table
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CHEM1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CHEM1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CHEM1/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CHEM2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CHEM2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#example-136" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 13.6
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example 13.6">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-your-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Check Your Learning
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calculation-of-an-equilibrium-constant" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Calculation of an Equilibrium Constant
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-137" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 13.7
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example 13.7">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-your-learning_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Check Your Learning
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calculation-of-a-missing-equilibrium-concentration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Calculation of a Missing Equilibrium Concentration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-138" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 13.8
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example 13.8">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-your-learning_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Check Your Learning
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calculation-of-equilibrium-concentrations-from-initial-concentrations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Calculation of Equilibrium Concentrations from Initial Concentrations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-139" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 13.9
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example 13.9">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-your-learning_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Check Your Learning
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-your-learning_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Check Your Learning
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-1310" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 13.10
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example 13.10">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-your-learning_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Check Your Learning
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#temperature-dependence-of-spontaneity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Temperature Dependence of Spontaneity
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-1311" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 13.11
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example 13.11">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-your-learning_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Check Your Learning
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-1312" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 13.12
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example 13.12">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solution
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#free-energy-and-equilibrium" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Free Energy and Equilibrium
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-1313" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 13.13
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example 13.13">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-your-learning_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Check Your Learning
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-1314" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 13.14
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example 13.14">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-your-learning_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Check Your Learning
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="equilibrium-calculations">Equilibrium Calculations</h1>
+<p>Having covered the essential concepts of chemical equilibria in the preceding sections of this chapter, this final section will demonstrate the more practical aspect of using these concepts and appropriate mathematical strategies to perform various equilibrium calculations. These types of computations are essential to many areas of science and technology—for example, in the formulation and dosing of pharmaceutical products. After a drug is ingested or injected, it is typically involved in several chemical equilibria that affect its ultimate concentration in the body system of interest. Knowledge of the quantitative aspects of these equilibria is required to compute a dosage amount that will solicit the desired therapeutic effect.</p>
+<p>Many of the useful equilibrium calculations that will be demonstrated here require terms representing changes in reactant and product concentrations. These terms are derived from the stoichiometry of the reaction, as illustrated by decomposition of ammonia:</p>
+<p>[
+2 \mathrm{NH}_3 (g) \rightleftharpoons \mathrm{N}_2 (g) + 3 \mathrm{H}_2 (g)
+]</p>
+<p>As shown earlier in this chapter, this equilibrium may be established within a sealed container that initially contains either NH3 only, or a mixture of any two of the three chemical species involved in the equilibrium. Regardless of its initial composition, a reaction mixture will show the same relationships between changes in the concentrations of the three species involved, as dictated by the reaction stoichiometry (see also the related content on expressing reaction rates in the chapter on kinetics). For example, if the nitrogen concentration increases by an amount $x$:</p>
+<p>[
+\Delta [\mathrm{N}_2] = +x,
+]</p>
+<p>the corresponding changes in the other species concentrations are</p>
+<p>[
+\Delta [\mathrm{H}_2] = \Delta [\mathrm{N}_2] \left(\frac{3 \text{ mol } \mathrm{H}_2}{1 \text{ mol } \mathrm{N}_2}\right) = +3x
+]</p>
+<p>[
+\Delta [\mathrm{NH}_3] = -\Delta [\mathrm{N}_2] \left(\frac{2 \text{ mol } \mathrm{NH}_3}{1 \text{ mol } \mathrm{N}_2}\right) = -2x,
+]</p>
+<p>where the negative sign indicates a decrease in concentration.</p>
+<h2 id="example-136">Example 13.6</h2>
+<p>Determining Relative Changes in Concentration<br />
+Derive the missing terms representing concentration changes for each of the following reactions.</p>
+<p>(a)<br />
+[
+\mathrm{C}_2 \mathrm{H}_2 (g) + 2 \mathrm{Br}_2 (g) \rightleftharpoons \mathrm{C}_2 \mathrm{H}_2 \mathrm{Br}_4 (g)
+]
+[
+x \quad ____ \quad ____
+]</p>
+<p>(b)<br />
+[
+\mathrm{I}_2 (aq) + \mathrm{I}^- (aq) \rightleftharpoons \mathrm{I}_3^- (aq)
+]
+[
+____ \quad ____ \quad x
+]</p>
+<p>(c)<br />
+[
+\mathrm{C}_3 \mathrm{H}_8 (g) + 5 \mathrm{O}_2 (g) \rightleftharpoons 3 \mathrm{CO}_2 (g) + 4 \mathrm{H}_2 \mathrm{O} (g)
+]
+[
+x \quad ____ \quad ____ \quad ____
+]</p>
+<h3 id="solution">Solution</h3>
+<p>(a)<br />
+[
+\mathrm{C}_2 \mathrm{H}_2 (g) + 2 \mathrm{Br}_2 (g) \rightleftharpoons \mathrm{C}_2 \mathrm{H}_2 \mathrm{Br}_4 (g)
+]
+[
+x \quad 2x \quad -x
+]</p>
+<p>(b)<br />
+[
+\mathrm{I}_2 (aq) + \mathrm{I}^- (aq) \rightleftharpoons \mathrm{I}_3^- (aq)
+]
+[
+-x \quad -x \quad x
+]</p>
+<p>(c)<br />
+[
+\mathrm{C}_3 \mathrm{H}_8 (g) + 5 \mathrm{O}_2 (g) \rightleftharpoons 3 \mathrm{CO}_2 (g) + 4 \mathrm{H}_2 \mathrm{O} (g)
+]
+[
+x \quad 5x \quad -3x \quad -4x
+]</p>
+<h3 id="check-your-learning">Check Your Learning</h3>
+<p>Complete the changes in concentrations for each of the following reactions:</p>
+<p>(a)<br />
+[
+2 \mathrm{SO}_2 (g) + \mathrm{O}_2 (g) \rightleftharpoons 2 \mathrm{SO}_3 (g)
+]
+[
+____ \quad x \quad ____
+]</p>
+<p>(b)<br />
+[
+\mathrm{C}_4 \mathrm{H}_8 (g) \rightleftharpoons 2 \mathrm{C}_2 \mathrm{H}_4 (g)
+]
+[
+____ \quad -2x
+]</p>
+<p>(c)<br />
+[
+4 \mathrm{NH}_3 (g) + 7 \mathrm{O}_2 (g) \rightleftharpoons 4 \mathrm{NO}_2 (g) + 6 \mathrm{H}_2 \mathrm{O} (g)
+]
+[
+____ \quad ____ \quad ____ \quad ____
+]</p>
+<p><strong>Answer:</strong><br />
+(a) $2x, x, -2x$; (b) $x, -2x$; (c) $4x, 7x, -4x, -6x$ or $-4x, -7x, 4x, 6x$</p>
+<h2 id="calculation-of-an-equilibrium-constant">Calculation of an Equilibrium Constant</h2>
+<p>The equilibrium constant for a reaction is calculated from the equilibrium concentrations (or pressures) of its reactants and products. If these concentrations are known, the calculation simply involves their substitution into the $K$ expression, as was illustrated by Example 13.2. A slightly more challenging example is provided next, in which the reaction stoichiometry is used to derive equilibrium concentrations from the information provided. The basic strategy of this computation is helpful for many types of equilibrium computations and relies on the use of terms for the reactant and product concentrations initially present, for how they change as the reaction proceeds, and for what they are when the system reaches equilibrium. The acronym ICE is commonly used to refer to this mathematical approach, and the concentrations terms are usually gathered in a tabular format called an ICE table.</p>
+<h2 id="example-137">Example 13.7</h2>
+<p>Calculation of an Equilibrium Constant<br />
+Iodine molecules react reversibly with iodide ions to produce triiodide ions.</p>
+<p>[
+\mathrm{I}_2 (aq) + \mathrm{I}^- (aq) \rightleftharpoons \mathrm{I}_3^- (aq)
+]</p>
+<p>If a solution with the concentrations of $\mathrm{I}_2$ and $\mathrm{I}^-$ both equal to $1.000 \times 10^{-3} \, M$ before reaction gives an equilibrium concentration of $\mathrm{I}_2$ of $6.61 \times 10^{-4} \, M$, what is the equilibrium constant for the reaction?</p>
+<h3 id="solution_1">Solution</h3>
+<p>To calculate the equilibrium constants, equilibrium concentrations are needed for all the reactants and products:</p>
+<p>[
+K_c = \frac{[\mathrm{I}_3^-]}{[\mathrm{I}_2][\mathrm{I}^-]}
+]</p>
+<p>Provided are the initial concentrations of the reactants and the equilibrium concentration of the product. Use this information to derive terms for the equilibrium concentrations of the reactants, presenting all the information in an ICE table.</p>
+<p>This table has two main columns and four rows. The first row for the first column does not have a heading and then has the following in the first column: Initial concentration ( M ), Change ( M ), Equilibrium concentration ( M ). The second column has the header, “I subscript 2 plus sign I superscript negative sign equilibrium arrow I subscript 3 superscript negative sign.” Under the second column is a subgroup of three rows and three columns. The first column has the following: 1.000 times 10 to the negative third power, negative x, [ I subscript 2 ] subscript i minus x. The second column has the following: 1.000 times 10 to the negative third power, negative x, [ I superscript negative sign ] subscript i minus x. The third column has the following: 0, positive x, [ I superscript negative sign ] subscript i plus x.</p>
+<p>At equilibrium the concentration of $\mathrm{I}_2$ is $6.61 \times 10^{-4} \, M$ so that</p>
+<p>[
+1.000 \times 10^{-3} - x = 6.61 \times 10^{-4}
+]</p>
+<p>[
+x = 1.000 \times 10^{-3} - 6.61 \times 10^{-4} = 3.39 \times 10^{-4} \, M
+]</p>
+<p>The ICE table may now be updated with numerical values for all its concentrations:</p>
+<p>This table has two main columns and four rows. The first row for the first column does not have a heading and then has the following in the first column: Initial concentration ( M ), Change ( M ), Equilibrium concentration ( M ). The second column has the header, “I subscript 2 plus sign I superscript negative sign equilibrium arrow I subscript 3 superscript negative sign.” Under the second column is a subgroup of three rows and three columns. The first column has the following: 1.000 times 10 to the negative third power, negative 3.39 times 10 to the negative fourth power, 6.61 times 10 to the negative fourth power. The second column has the following: 1.000 times 10 to the negative third power, negative 3.39 times 10 to the negative fourth power, 6.61 times 10 to the negative fourth power. The third column has the following: 0, positive 3.39 times 10 to the negative fourth power, 3.39 times 10 to the negative fourth power.</p>
+<p>Finally, substitute the equilibrium concentrations into the $K$ expression and solve:</p>
+<p>[
+K_c = \frac{[\mathrm{I}_3^-]}{[\mathrm{I}_2][\mathrm{I}^-]} = \frac{3.39 \times 10^{-4} \, M}{(6.61 \times 10^{-4} \, M)(6.61 \times 10^{-4} \, M)} = 776
+]</p>
+<h3 id="check-your-learning_1">Check Your Learning</h3>
+<p>Ethanol and acetic acid react and form water and ethyl acetate, the solvent responsible for the odor of some nail polish removers.</p>
+<p>[
+\mathrm{C}_2 \mathrm{H}_5 \mathrm{OH} + \mathrm{CH}_3 \mathrm{CO}_2 \mathrm{H} \rightleftharpoons \mathrm{CH}_3 \mathrm{CO}_2 \mathrm{C}_2 \mathrm{H}_5 + \mathrm{H}_2 \mathrm{O}
+]</p>
+<p>When 1 mol each of $\mathrm{C}_2 \mathrm{H}_5 \mathrm{OH}$ and $\mathrm{CH}_3 \mathrm{CO}_2 \mathrm{H}$ are allowed to react in 1 L of the solvent dioxane, equilibrium is established when $\frac{1}{3}$ mol of each of the reactants remains. Calculate the equilibrium constant for the reaction. (Note: Water is a solute in this reaction.)</p>
+<p><strong>Answer:</strong><br />
+$K_c = 4$</p>
+<h2 id="calculation-of-a-missing-equilibrium-concentration">Calculation of a Missing Equilibrium Concentration</h2>
+<p>When the equilibrium constant and all but one equilibrium concentration are provided, the other equilibrium concentration(s) may be calculated. A computation of this sort is illustrated in the next example exercise.</p>
+<h2 id="example-138">Example 13.8</h2>
+<p>Calculation of a Missing Equilibrium Concentration<br />
+Nitrogen oxides are air pollutants produced by the reaction of nitrogen and oxygen at high temperatures. At 2000 °C, the value of the $K_c$ for the reaction,</p>
+<p>[
+\mathrm{N}_2 (g) + \mathrm{O}_2 (g) \rightleftharpoons 2 \mathrm{NO} (g),
+]</p>
+<p>is $4.1 \times 10^{-4}$. Calculate the equilibrium concentration of $\mathrm{NO} (g)$ in air at 1 atm pressure and 2000 °C. The equilibrium concentrations of $\mathrm{N}_2$ and $\mathrm{O}_2$ at this pressure and temperature are 0.036 M and 0.0089 M, respectively.</p>
+<h3 id="solution_2">Solution</h3>
+<p>Substitute the provided quantities into the equilibrium constant expression and solve for $[\mathrm{NO}]$:</p>
+<p>[
+K_c = \frac{[\mathrm{NO}]^2}{[\mathrm{N}_2][\mathrm{O}_2]}
+]</p>
+<p>[
+[\mathrm{NO}]^2 = K_c [\mathrm{N}_2][\mathrm{O}_2]
+]</p>
+<p>[
+[\mathrm{NO}] = \sqrt{K_c [\mathrm{N}_2][\mathrm{O}_2]} = \sqrt{(4.1 \times 10^{-4})(0.036)(0.0089)} = \sqrt{1.31 \times 10^{-7}} = 3.6 \times 10^{-4}
+]</p>
+<p>Thus $[\mathrm{NO}]$ is $3.6 \times 10^{-4}$ mol/L at equilibrium under these conditions.</p>
+<p>To confirm this result, it may be used along with the provided equilibrium concentrations to calculate a value for $K$:</p>
+<p>[
+K_c = \frac{[\mathrm{NO}]^2}{[\mathrm{N}_2][\mathrm{O}_2]} = \frac{(3.6 \times 10^{-4})^2}{(0.036)(0.0089)} = 4.0 \times 10^{-4}
+]</p>
+<p>This result is consistent with the provided value for $K$ within nominal uncertainty, differing by just 1 in the least significant digit’s place.</p>
+<h3 id="check-your-learning_2">Check Your Learning</h3>
+<p>The equilibrium constant $K_c$ for the reaction of nitrogen and hydrogen to produce ammonia at a certain temperature is $6.00 \times 10^{-2}$. Calculate the equilibrium concentration of ammonia if the equilibrium concentrations of nitrogen and hydrogen are 4.26 M and 2.09 M, respectively.</p>
+<p><strong>Answer:</strong><br />
+1.53 mol/L</p>
+<h2 id="calculation-of-equilibrium-concentrations-from-initial-concentrations">Calculation of Equilibrium Concentrations from Initial Concentrations</h2>
+<p>Perhaps the most challenging type of equilibrium calculation can be one in which equilibrium concentrations are derived from initial concentrations and an equilibrium constant. For these calculations, a four-step approach is typically useful:</p>
+<ol>
+<li>Identify the direction in which the reaction will proceed to reach equilibrium.  </li>
+<li>Develop an ICE table.  </li>
+<li>Calculate the concentration changes and, subsequently, the equilibrium concentrations.  </li>
+<li>Confirm the calculated equilibrium concentrations.</li>
+</ol>
+<p>The last two example exercises of this chapter demonstrate the application of this strategy.</p>
+<h2 id="example-139">Example 13.9</h2>
+<p>Calculation of Equilibrium Concentrations<br />
+Under certain conditions, the equilibrium constant $K_c$ for the decomposition of $\mathrm{PCl}_5 (g)$ into $\mathrm{PCl}_3 (g)$ and $\mathrm{Cl}_2 (g)$ is 0.0211. What are the equilibrium concentrations of $\mathrm{PCl}_5$, $\mathrm{PCl}_3$, and $\mathrm{Cl}_2$ in a mixture that initially contained only $\mathrm{PCl}_5$ at a concentration of 1.00 M?</p>
+<h3 id="solution_3">Solution</h3>
+<p>Use the stepwise process described earlier.</p>
+<p><strong>Step 1.</strong> Determine the direction the reaction proceeds.</p>
+<p>The balanced equation for the decomposition of $\mathrm{PCl}_5$ is</p>
+<p>[
+\mathrm{PCl}_5 (g) \rightleftharpoons \mathrm{PCl}_3 (g) + \mathrm{Cl}_2 (g)
+]</p>
+<p>Because only the reactant is present initially, $Q_c = 0$ and the reaction will proceed to the right.</p>
+<p><strong>Step 2.</strong> Develop an ICE table.</p>
+<p>This table has two main columns and four rows. The first row for the first column does not have a heading and then has the following in the first column: Initial concentration ( M ), Change ( M ), Equilibrium concentration ( M ). The second column has the header, “P C l subscript 5 equilibrium arrow P C l subscript 3 plus C l subscript 2.” Under the second column is a subgroup of three rows and three columns. The first column has the following: 1.00, negative x, 1.00 minus x. The second column has the following: 0, positive x, x. The third column has the following: 0, positive x, x.</p>
+<p><strong>Step 3.</strong> Solve for the change and the equilibrium concentrations.</p>
+<p>Substituting the equilibrium concentrations into the equilibrium constant equation gives</p>
+<p>[
+K_c = \frac{[\mathrm{PCl}_3][\mathrm{Cl}_2]}{[\mathrm{PCl}_5]} = 0.0211 = \frac{x \cdot x}{1.00 - x} = \frac{x^2}{1.00 - x}
+]</p>
+<p>Rearranged:</p>
+<p>[
+0.0211 (1.00 - x) = x^2
+]</p>
+<p>[
+x^2 + 0.0211 x - 0.0211 = 0
+]</p>
+<p>Using the quadratic formula:</p>
+<p>[
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+]</p>
+<p>where $a=1$, $b=0.0211$, and $c=-0.0211$:</p>
+<p>[
+x = \frac{-0.0211 \pm \sqrt{(0.0211)^2 - 4(1)(-0.0211)}}{2}
+]</p>
+<p>[
+= \frac{-0.0211 \pm \sqrt{4.45 \times 10^{-4} + 8.44 \times 10^{-2}}}{2} = \frac{-0.0211 \pm 0.291}{2}
+]</p>
+<p>The two roots are:</p>
+<p>[
+x = \frac{-0.0211 + 0.291}{2} = 0.135
+]</p>
+<p>and</p>
+<p>[
+x = \frac{-0.0211 - 0.291}{2} = -0.156
+]</p>
+<p>Only the positive root is physically meaningful, so $x = 0.135$ M.</p>
+<p>The equilibrium concentrations are:</p>
+<p>[
+[\mathrm{PCl}_5] = 1.00 - 0.135 = 0.87 \, M
+]</p>
+<p>[
+[\mathrm{PCl}_3] = x = 0.135 \, M
+]</p>
+<p>[
+[\mathrm{Cl}_2] = x = 0.135 \, M
+]</p>
+<p><strong>Step 4.</strong> Confirm the calculated equilibrium concentrations.</p>
+<p>Substitution into the expression for $K_c$ gives</p>
+<p>[
+K_c = \frac{(0.135)(0.135)}{0.87} = 0.021
+]</p>
+<p>The equilibrium constant calculated from the equilibrium concentrations is equal to the value of $K_c$ given in the problem (when rounded to the proper number of significant figures).</p>
+<h3 id="check-your-learning_3">Check Your Learning</h3>
+<p>Acetic acid, $\mathrm{CH}_3 \mathrm{CO}_2 \mathrm{H}$, reacts with ethanol, $\mathrm{C}_2 \mathrm{H}_5 \mathrm{OH}$, to form water and ethyl acetate, $\mathrm{CH}_3 \mathrm{CO}_2 \mathrm{C}_2 \mathrm{H}_5$.</p>
+<p>[
+\mathrm{CH}_3 \mathrm{CO}_2 \mathrm{H} + \mathrm{C}_2 \mathrm{H}_5 \mathrm{OH} \rightleftharpoons \mathrm{CH}_3 \mathrm{CO}_2 \mathrm{C}_2 \mathrm{H}_5 + \mathrm{H}_2 \mathrm{O}
+]</p>
+<p>The equilibrium constant for this reaction with dioxane as a solvent is 4.0. What are the equilibrium concentrations for a mixture that is initially 0.15 M in $\mathrm{CH}_3 \mathrm{CO}_2 \mathrm{H}$, 0.15 M in $\mathrm{C}_2 \mathrm{H}_5 \mathrm{OH}$, 0.40 M in $\mathrm{CH}_3 \mathrm{CO}_2 \mathrm{C}_2 \mathrm{H}_5$, and 0.40 M in $\mathrm{H}_2 \mathrm{O}$?</p>
+<p><strong>Answer:</strong><br />
+$[\mathrm{CH}_3 \mathrm{CO}_2 \mathrm{H}] = 0.18 \, M$, $[\mathrm{C}_2 \mathrm{H}_5 \mathrm{OH}] = 0.18 \, M$, $[\mathrm{CH}_3 \mathrm{CO}_2 \mathrm{C}_2 \mathrm{H}_5] = 0.37 \, M$, $[\mathrm{H}_2 \mathrm{O}] = 0.37 \, M$</p>
+<h3 id="check-your-learning_4">Check Your Learning</h3>
+<p>A 1.00-L flask is filled with 1.00 moles of $\mathrm{H}_2$ and 2.00 moles of $\mathrm{I}_2$. The value of the equilibrium constant for the reaction of hydrogen and iodine reacting to form hydrogen iodide is 50.5 under the given conditions.</p>
+<p>[
+\mathrm{H}_2 (g) + \mathrm{I}_2 (g) \rightleftharpoons 2 \mathrm{HI} (g)
+]</p>
+<p>What are the equilibrium concentrations of $\mathrm{H}_2$, $\mathrm{I}_2$, and $\mathrm{HI}$ in moles/L?</p>
+<p><strong>Answer:</strong><br />
+$[\mathrm{H}_2] = 0.06 \, M$, $[\mathrm{I}_2] = 1.06 \, M$, $[\mathrm{HI}] = 1.88 \, M$</p>
+<h2 id="example-1310">Example 13.10</h2>
+<p>Calculation of Equilibrium Concentrations Using an Algebra-Simplifying Assumption<br />
+What are the concentrations at equilibrium of a 0.15 M solution of HCN?</p>
+<p>[
+\mathrm{HCN} (aq) \rightleftharpoons \mathrm{H}^+ (aq) + \mathrm{CN}^- (aq) \quad K_c = 4.9 \times 10^{-10}
+]</p>
+<h3 id="solution_4">Solution</h3>
+<p>Using $x$ to represent the concentration of each product at equilibrium gives this ICE table:</p>
+<p>This table has two main columns and four rows. The first row for the first column does not have a heading and then has the following: Initial pressure ( M ), Change ( M ), Equilibrium ( M ). The second column has the header, “H C N ( a q ) equilibrium arrow H superscript plus sign ( a q ) plus C N subscript negative sign ( a q ).” Under the second column is a subgroup of three columns and three rows. The first column has the following: 0.15, negative x, 0.15 minus x. The second column has the following: 0, positive x, x. The third column has the following: 0, positive x, x.</p>
+<p>Substitute the equilibrium concentration terms into the $K_c$ expression:</p>
+<p>[
+K_c = \frac{x \cdot x}{0.15 - x} = \frac{x^2}{0.15 - x}
+]</p>
+<p>Rearranged to quadratic form:</p>
+<p>[
+x^2 + 4.9 \times 10^{-10} x - 7.35 \times 10^{-11} = 0
+]</p>
+<p>Solving for $x$:</p>
+<p>[
+x = 8.56 \times 10^{-6} \, M \quad (3 \text{ sig. figs.}) = 8.6 \times 10^{-6} \, M \quad (2 \text{ sig. figs.})
+]</p>
+<p>Thus $[\mathrm{H}^+] = [\mathrm{CN}^-] = x = 8.6 \times 10^{-6} \, M$ and $[\mathrm{HCN}] = 0.15 - x = 0.15 \, M$.</p>
+<p>Note in this case that the change in concentration is significantly less than the initial concentration (a consequence of the small $K$), and so the initial concentration experiences a negligible change:</p>
+<p>If $x \ll 0.15 \, M$, then $(0.15 - x) \approx 0.15$.</p>
+<p>This approximation allows for a more expedient mathematical approach to the calculation that avoids the need to solve for the roots of a quadratic equation:</p>
+<p>[
+K_c = \frac{x^2}{0.15} \approx 4.9 \times 10^{-10}
+]</p>
+<p>[
+x^2 = (0.15)(4.9 \times 10^{-10}) = 7.4 \times 10^{-11}
+]</p>
+<p>[
+x = \sqrt{7.4 \times 10^{-11}} = 8.6 \times 10^{-6} \, M
+]</p>
+<p>The value of $x$ calculated is, indeed, much less than the initial concentration:</p>
+<p>[
+8.6 \times 10^{-6} \ll 0.15
+]</p>
+<p>and so the approximation was justified. If this simplified approach were to yield a value for $x$ that did not justify the approximation, the calculation would need to be repeated without making the approximation.</p>
+<h3 id="check-your-learning_5">Check Your Learning</h3>
+<p>What are the equilibrium concentrations in a 0.25 M $\mathrm{NH}_3$ solution?</p>
+<p>[
+\mathrm{NH}_3 (aq) + \mathrm{H}_2 \mathrm{O} (l) \rightleftharpoons \mathrm{NH}_4^+ (aq) + \mathrm{OH}^- (aq) \quad K_c = 1.8 \times 10^{-5}
+]</p>
+<p><strong>Answer:</strong><br />
+$[\mathrm{OH}^-] = [\mathrm{NH}_4^+] = 0.0021 \, M$; $[\mathrm{NH}_3] = 0.25 \, M$</p>
+<h2 id="temperature-dependence-of-spontaneity">Temperature Dependence of Spontaneity</h2>
+<p>As was previously demonstrated in the section on entropy in an earlier chapter, the spontaneity of a process may depend upon the temperature of the system. Phase transitions, for example, will proceed spontaneously in one direction or the other depending upon the temperature of the substance in question. Likewise, some chemical reactions can also exhibit temperature dependent spontaneities. To illustrate this concept, the equation relating free energy change to the enthalpy and entropy changes for the process is considered:</p>
+<p>[
+\Delta G = \Delta H - T \Delta S
+]</p>
+<p>The spontaneity of a process, as reflected in the arithmetic sign of its free energy change, is then determined by the signs of the enthalpy and entropy changes and, in some cases, the absolute temperature. Since $T$ is the absolute (kelvin) temperature, it can only have positive values. Four possibilities therefore exist with regard to the signs of the enthalpy and entropy changes:</p>
+<ol>
+<li>
+<p>Both $\Delta H$ and $\Delta S$ are positive. This condition describes an endothermic process that involves an increase in system entropy. In this case, $\Delta G$ will be negative if the magnitude of the $T \Delta S$ term is greater than $\Delta H$. If the $T \Delta S$ term is less than $\Delta H$, the free energy change will be positive. Such a process is spontaneous at high temperatures and nonspontaneous at low temperatures.</p>
+</li>
+<li>
+<p>Both $\Delta H$ and $\Delta S$ are negative. This condition describes an exothermic process that involves a decrease in system entropy. In this case, $\Delta G$ will be negative if the magnitude of the $T \Delta S$ term is less than $\Delta H$. If the $T \Delta S$ term’s magnitude is greater than $\Delta H$, the free energy change will be positive. Such a process is spontaneous at low temperatures and nonspontaneous at high temperatures.</p>
+</li>
+<li>
+<p>$\Delta H$ is positive and $\Delta S$ is negative. This condition describes an endothermic process that involves a decrease in system entropy. In this case, $\Delta G$ will be positive regardless of the temperature. Such a process is nonspontaneous at all temperatures.</p>
+</li>
+<li>
+<p>$\Delta H$ is negative and $\Delta S$ is positive. This condition describes an exothermic process that involves an increase in system entropy. In this case, $\Delta G$ will be negative regardless of the temperature. Such a process is spontaneous at all temperatures.</p>
+</li>
+</ol>
+<h2 id="example-1311">Example 13.11</h2>
+<p>Predicting the Temperature Dependence of Spontaneity<br />
+The incomplete combustion of carbon is described by the following equation:</p>
+<p>[
+2 \mathrm{C} (s) + \mathrm{O}_2 (g) \rightarrow 2 \mathrm{CO} (g)
+]</p>
+<p>How does the spontaneity of this process depend upon temperature?</p>
+<h3 id="solution_5">Solution</h3>
+<p>Combustion processes are exothermic ($\Delta H &lt; 0$). This particular reaction involves an increase in entropy due to the accompanying increase in the amount of gaseous species (net gain of one mole of gas, $\Delta S &gt; 0$). The reaction is therefore spontaneous ($\Delta G &lt; 0$) at all temperatures.</p>
+<h3 id="check-your-learning_6">Check Your Learning</h3>
+<p>Popular chemical hand warmers generate heat by the air-oxidation of iron:</p>
+<p>[
+4 \mathrm{Fe} (s) + 3 \mathrm{O}_2 (g) \rightarrow 2 \mathrm{Fe}_2 \mathrm{O}_3 (s)
+]</p>
+<p>How does the spontaneity of this process depend upon temperature?</p>
+<p><strong>Answer:</strong><br />
+$\Delta H$ and $\Delta S$ are negative; the reaction is spontaneous at low temperatures.</p>
+<p>When considering the conclusions drawn regarding the temperature dependence of spontaneity, it is important to keep in mind what the terms “high” and “low” mean. Since these terms are adjectives, the temperatures in question are deemed high or low relative to some reference temperature. A process that is nonspontaneous at one temperature but spontaneous at another will necessarily undergo a change in “spontaneity” (as reflected by its $\Delta G$) as temperature varies. This is clearly illustrated by a graphical presentation of the free energy change equation, in which $\Delta G$ is plotted on the $y$ axis versus $T$ on the $x$ axis:</p>
+<p>[
+\Delta G = \Delta H - T \Delta S
+]</p>
+<p>[
+y = b + m x
+]</p>
+<p>Such a plot shows that a process whose enthalpy and entropy changes are of the same arithmetic sign will exhibit a temperature-dependent spontaneity. Each line crosses from one spontaneity domain (positive or negative $\Delta G$) to the other at a temperature that is characteristic of the process in question. This temperature is represented by the $x$-intercept of the line, that is, the value of $T$ for which $\Delta G$ is zero:</p>
+<p>[
+\Delta G = 0 = \Delta H - T \Delta S
+]</p>
+<p>[
+T = \frac{\Delta H}{\Delta S}
+]</p>
+<p>So, saying a process is spontaneous at “high” or “low” temperatures means the temperature is above or below, respectively, that temperature at which $\Delta G$ for the process is zero. As noted earlier, the condition of $\Delta G = 0$ describes a system at equilibrium.</p>
+<h2 id="example-1312">Example 13.12</h2>
+<p>Equilibrium Temperature for a Phase Transition<br />
+As defined in the chapter on liquids and solids, the boiling point of a liquid is the temperature at which its liquid and gaseous phases are in equilibrium (that is, when vaporization and condensation occur at equal rates). Use the information in Appendix G to estimate the boiling point of water.</p>
+<h3 id="solution_6">Solution</h3>
+<p>The process of interest is the following phase change:</p>
+<p>[
+\mathrm{H}_2 \mathrm{O} (l) \rightarrow \mathrm{H}_2 \mathrm{O} (g)
+]</p>
+<p>When this process is at equilibrium, $\Delta G = 0$, so the following is true:</p>
+<p>[
+0 = \Delta H^\circ - T \Delta S^\circ \quad \text{or} \quad T = \frac{\Delta H^\circ}{\Delta S^\circ}
+]</p>
+<p>Using the standard thermodynamic data from Appendix G,</p>
+<p>[
+\Delta H^\circ = 1 \text{ mol} \times \Delta H_f^\circ (\mathrm{H}_2 \mathrm{O} (g)) - 1 \text{ mol} \times \Delta H_f^\circ (\mathrm{H}_2 \mathrm{O} (l)) = (1 \text{ mol})(-241.82 \, \mathrm{kJ/mol}) - (1 \text{ mol})(-285.83 \, \mathrm{kJ/mol}) = 44.01 \, \mathrm{kJ}
+]</p>
+<p>[
+\Delta S^\circ = 1 \text{ mol} \times \Delta S^\circ (\mathrm{H}_2 \mathrm{O} (g)) - 1 \text{ mol} \times \Delta S^\circ (\mathrm{H}_2 \mathrm{O} (l)) = (1 \text{ mol})(188.8 \, \mathrm{J/K \cdot mol}) - (1 \text{ mol})(70.0 \, \mathrm{J/K \cdot mol}) = 118.8 \, \mathrm{J/K}
+]</p>
+<p>[
+T = \frac{44.01 \times 10^3 \, \mathrm{J}}{118.8 \, \mathrm{J/K}} = 370.5 \, K = 97.3^\circ C
+]</p>
+<p>The accepted value for water’s normal boiling point is 373.2 K (100.0 °C), and so this calculation is in reasonable agreement. Note that the values for enthalpy and entropy changes data used were derived from standard data at 298 K. If desired, you could obtain more accurate results by using enthalpy and entropy changes determined at (or at least closer to) the actual boiling point.</p>
+<h2 id="free-energy-and-equilibrium">Free Energy and Equilibrium</h2>
+<p>The free energy change for a process may be viewed as a measure of its driving force. A negative value for $\Delta G$ represents a driving force for the process in the forward direction, while a positive value represents a driving force for the process in the reverse direction. When $\Delta G$ is zero, the forward and reverse driving forces are equal, and the process occurs in both directions at the same rate (the system is at equilibrium).</p>
+<p>In the section on equilibrium, the reaction quotient, $Q$, was introduced as a convenient measure of the status of an equilibrium system. Recall that $Q$ is the numerical value of the mass action expression for the system, and that you may use its value to identify the direction in which a reaction will proceed in order to achieve equilibrium. When $Q$ is less than the equilibrium constant, $K$, the reaction will proceed in the forward direction until equilibrium is reached and $Q = K$. Conversely, if $Q &gt; K$, the process will proceed in the reverse direction until equilibrium is achieved.</p>
+<p>The free energy change for a process taking place with reactants and products present under nonstandard conditions (pressures other than 1 bar; concentrations other than 1 M) is related to the standard free energy change, according to this equation:</p>
+<p>[
+\Delta G = \Delta G^\circ + R T \ln Q
+]</p>
+<p>$R$ is the gas constant (8.314 J/K mol), $T$ is the kelvin or absolute temperature, and $Q$ is the reaction quotient. This equation may be used to predict the spontaneity for a process under any given set of conditions as illustrated in Example 13.13.</p>
+<h2 id="example-1313">Example 13.13</h2>
+<p>Calculating $\Delta G$ under Nonstandard Conditions<br />
+What is the free energy change for the process shown here under the specified conditions?<br />
+$T = 25^\circ C$, $P_{\mathrm{N}<em>2} = 0.870$ atm, $P</em>{\mathrm{H}<em>2} = 0.250$ atm, and $P</em>{\mathrm{NH}_3} = 12.9$ atm</p>
+<p>[
+2 \mathrm{NH}_3 (g) \rightarrow 3 \mathrm{H}_2 (g) + \mathrm{N}_2 (g) \quad \Delta G^\circ = 33.0 \, \mathrm{kJ/mol}
+]</p>
+<h3 id="solution_7">Solution</h3>
+<p>The equation relating free energy change to standard free energy change and reaction quotient may be used directly:</p>
+<p>[
+\Delta G = \Delta G^\circ + R T \ln Q = 33.0 \, \mathrm{kJ/mol} + (8.314 \, \mathrm{J/mol \cdot K})(298 \, K) \ln \left(\frac{(0.250)^3 \times 0.870}{(12.9)^2}\right) = 9680 \, \mathrm{J/mol} \text{ or } 9.68 \, \mathrm{kJ/mol}
+]</p>
+<p>Since the computed value for $\Delta G$ is positive, the reaction is nonspontaneous under these conditions.</p>
+<h3 id="check-your-learning_7">Check Your Learning</h3>
+<p>Calculate the free energy change for this same reaction at 875 °C for a mixture containing each gas at a partial pressure of 1.88 atm. Is the reaction spontaneous under these conditions?</p>
+<p><strong>Answer:</strong><br />
+$\Delta G = 45.1 \, \mathrm{kJ/mol}$; no</p>
+<p>For a system at equilibrium, $Q = K$ and $\Delta G = 0$, and the previous equation may be written as</p>
+<p>[
+0 = \Delta G^\circ + R T \ln K \quad (\text{at equilibrium})
+]</p>
+<p>[
+\Delta G^\circ = - R T \ln K \quad \text{or} \quad K = e^{-\frac{\Delta G^\circ}{R T}}
+]</p>
+<p>This form of the equation provides a useful link between these two essential thermodynamic properties, and it can be used to derive equilibrium constants from standard free energy changes and vice versa. The relations between standard free energy changes and equilibrium constants are summarized in Table 13.1.</p>
+<table>
+<thead>
+<tr>
+<th>$K$</th>
+<th>$\Delta G^\circ$</th>
+<th>Composition of an Equilibrium Mixture</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$&gt; 1$</td>
+<td>$&lt; 0$</td>
+<td>Products are more abundant</td>
+</tr>
+<tr>
+<td>$&lt; 1$</td>
+<td>$&gt; 0$</td>
+<td>Reactants are more abundant</td>
+</tr>
+<tr>
+<td>$= 1$</td>
+<td>$= 0$</td>
+<td>Reactants and products are comparably abundant</td>
+</tr>
+</tbody>
+</table>
+<h2 id="example-1314">Example 13.14</h2>
+<p>Calculating an Equilibrium Constant using Standard Free Energy Change<br />
+Given that the standard free energies of formation of $\mathrm{Ag}^+ (aq)$, $\mathrm{Cl}^- (aq)$, and $\mathrm{AgCl} (s)$ are 77.1 kJ/mol, −131.2 kJ/mol, and −109.8 kJ/mol, respectively, calculate the solubility product, $K_{sp}$, for $\mathrm{AgCl}$.</p>
+<h3 id="solution_8">Solution</h3>
+<p>The reaction of interest is the following:</p>
+<p>[
+\mathrm{AgCl} (s) \rightleftharpoons \mathrm{Ag}^+ (aq) + \mathrm{Cl}^- (aq)
+]</p>
+<p>[
+K_{sp} = [\mathrm{Ag}^+][\mathrm{Cl}^-]
+]</p>
+<p>The standard free energy change for this reaction is first computed using standard free energies of formation for its reactants and products:</p>
+<p>[
+\Delta G^\circ = [\Delta G_f^\circ (\mathrm{Ag}^+ (aq)) + \Delta G_f^\circ (\mathrm{Cl}^- (aq))] - [\Delta G_f^\circ (\mathrm{AgCl} (s))]
+]</p>
+<p>[
+= (77.1 \, \mathrm{kJ/mol} - 131.2 \, \mathrm{kJ/mol}) - (-109.8 \, \mathrm{kJ/mol}) = 55.7 \, \mathrm{kJ/mol}
+]</p>
+<p>The equilibrium constant for the reaction may then be derived from its standard free energy change:</p>
+<p>[
+K_{sp} = e^{-\frac{\Delta G^\circ}{R T}} = \exp \left(-\frac{55.7 \times 10^3 \, \mathrm{J/mol}}{8.314 \, \mathrm{J/mol \cdot K} \times 298.15 \, K}\right) = \exp(-22.470) = e^{-22.470} = 1.74 \times 10^{-10}
+]</p>
+<p>This result is in reasonable agreement with the value provided in Appendix J.</p>
+<h3 id="check-your-learning_8">Check Your Learning</h3>
+<p>Use the thermodynamic data provided in Appendix G to calculate the equilibrium constant for the dissociation of dinitrogen tetroxide at 25 °C.</p>
+<p>[
+\mathrm{N}_2 \mathrm{O}_4 (g) \rightleftharpoons 2 \mathrm{NO}_2 (g)
+]</p>
+<p><strong>Answer:</strong><br />
+$K = 0.32$</p>
+<p>To further illustrate the relation between these two essential thermodynamic concepts, consider the observation that reactions spontaneously proceed in a direction that ultimately establishes equilibrium. As may be shown by plotting the free energy change versus the extent of the reaction (for example, as reflected in the value of $Q$), equilibrium is established when the system’s free energy is minimized. If a system consists of reactants and products in nonequilibrium amounts ($Q \neq K$), the reaction will proceed spontaneously in the direction necessary to establish equilibrium.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

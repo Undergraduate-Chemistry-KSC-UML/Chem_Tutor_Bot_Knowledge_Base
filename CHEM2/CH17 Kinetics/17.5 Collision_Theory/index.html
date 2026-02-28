@@ -1,0 +1,643 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>Collision Theory - Instructional Material</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#collision-theory" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Instructional Material" class="md-header__button md-logo" aria-label="Instructional Material" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Instructional Material
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Collision Theory
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Instructional Material" class="md-nav__button md-logo" aria-label="Instructional Material" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Instructional Material
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Periodic_Table/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Periodic Table
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CHEM1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CHEM1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CHEM1/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CHEM2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CHEM2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="collision-theory">Collision Theory</h1>
+<p>We should not be surprised that atoms, molecules, or ions must collide before they can react with each other. Atoms must be close together to form chemical bonds. This simple premise is the basis for a very powerful theory that explains many observations regarding chemical kinetics, including factors affecting reaction rates.</p>
+<p>Collision theory is based on the following postulates:</p>
+<ul>
+<li>The rate of a reaction is proportional to the rate of reactant collisions:</li>
+</ul>
+<p>[
+  \text{reaction rate} \propto \frac{# \text{collisions}}{\text{time}}
+  ]</p>
+<ul>
+<li>
+<p>The reacting species must collide in an orientation that allows contact between the atoms that will become bonded together in the product.</p>
+</li>
+<li>
+<p>The collision must occur with adequate energy to permit mutual penetration of the reacting species’ valence shells so that the electrons can rearrange and form new bonds (and new chemical species).</p>
+</li>
+</ul>
+<p>We can see the importance of the two physical factors noted in postulates 2 and 3, the orientation and energy of collisions, when we consider the reaction of carbon monoxide with oxygen:</p>
+<p>[
+2 \text{CO}(g) + \text{O}_2(g) \rightarrow 2 \text{CO}_2(g)
+]</p>
+<p>Carbon monoxide is a pollutant produced by the combustion of hydrocarbon fuels. To reduce this pollutant, automobiles have catalytic converters that use a catalyst to carry out this reaction. It is also a side reaction of the combustion of gunpowder that results in muzzle flash for many firearms. If carbon monoxide and oxygen are present in sufficient amounts, the reaction will occur at high temperature and pressure.</p>
+<p>The first step in the gas-phase reaction between carbon monoxide and oxygen is a collision between the two molecules:</p>
+<p>[
+\text{CO}(g) + \text{O}_2(g) \rightarrow \text{CO}_2(g) + \text{O}(g)
+]</p>
+<p>Although there are many different possible orientations the two molecules can have relative to each other, consider the two presented. In the first case, the oxygen side of the carbon monoxide molecule collides with the oxygen molecule. In the second case, the carbon side of the carbon monoxide molecule collides with the oxygen molecule. The second case is clearly more likely to result in the formation of carbon dioxide, which has a central carbon atom bonded to two oxygen atoms (O=C=O). This is a rather simple example of how important the orientation of the collision is in terms of creating the desired product of the reaction.</p>
+<p>If the collision does take place with the correct orientation, there is still no guarantee that the reaction will proceed to form carbon dioxide. In addition to a proper orientation, the collision must also occur with sufficient energy to result in product formation. When reactant species collide with both proper orientation and adequate energy, they combine to form an unstable species called an activated complex or a transition state. These species are very short lived and usually undetectable by most analytical instruments. In some cases, sophisticated spectral measurements have been used to observe transition states.</p>
+<p>Collision theory explains why most reaction rates increase as concentrations increase. With an increase in the concentration of any reacting substance, the chances for collisions between molecules are increased because there are more molecules per unit of volume. More collisions mean a faster reaction rate, assuming the energy of the collisions is adequate.</p>
+<h1 id="activation-energy-and-the-arrhenius-equation">Activation Energy and the Arrhenius Equation</h1>
+<p>The minimum energy necessary to form a product during a collision between reactants is called the activation energy ($E_a$). How this energy compares to the kinetic energy provided by colliding reactant molecules is a primary factor affecting the rate of a chemical reaction. If the activation energy is much larger than the average kinetic energy of the molecules, the reaction will occur slowly since only a few fast-moving molecules will have enough energy to react. If the activation energy is much smaller than the average kinetic energy of the molecules, a large fraction of molecules will be adequately energetic and the reaction will proceed rapidly.</p>
+<p>These reaction diagrams are widely used in chemical kinetics to illustrate various properties of the reaction of interest. Viewing the diagram from left to right, the system initially comprises reactants only, A + B. Reactant molecules with sufficient energy can collide to form a high-energy activated complex or transition state. The unstable transition state can then subsequently decay to yield stable products, C + D. The diagram depicts the reaction's activation energy, $E_a$, as the energy difference between the reactants and the transition state. Using a specific energy, the enthalpy (see chapter on thermochemistry), the enthalpy change of the reaction, $\Delta H$, is estimated as the energy difference between the reactants and products. In this case, the reaction is exothermic ($\Delta H &lt; 0$) since it yields a decrease in system enthalpy.</p>
+<p>The Arrhenius equation relates the activation energy and the rate constant, $k$, for many chemical reactions:</p>
+<p>[
+k = A e^{-E_a / RT}
+]</p>
+<p>In this equation, $R$ is the ideal gas constant, which has a value 8.314 J/mol/K, $T$ is temperature on the Kelvin scale, $E_a$ is the activation energy in joules per mole, $e$ is the constant 2.7183, and $A$ is a constant called the frequency factor, which is related to the frequency of collisions and the orientation of the reacting molecules.</p>
+<p>Postulates of collision theory are nicely accommodated by the Arrhenius equation. The frequency factor, $A$, reflects how well the reaction conditions favor properly oriented collisions between reactant molecules. An increased probability of effectively oriented collisions results in larger values for $A$ and faster reaction rates.</p>
+<p>The exponential term, $e^{-E_a/RT}$, describes the effect of activation energy on reaction rate. According to kinetic molecular theory (see chapter on gases), the temperature of matter is a measure of the average kinetic energy of its constituent atoms or molecules. The distribution of energies among the molecules composing a sample of matter at any given temperature is described by the plot. Two shaded areas under the curve represent the numbers of molecules possessing adequate energy ($RT$) to overcome the activation barriers ($E_a$). A lower activation energy results in a greater fraction of adequately energized molecules and a faster reaction.</p>
+<p>The exponential term also describes the effect of temperature on reaction rate. A higher temperature represents a correspondingly greater fraction of molecules possessing sufficient energy ($RT$) to overcome the activation barrier ($E_a$). This yields a greater value for the rate constant and a correspondingly faster reaction rate.</p>
+<p>A convenient approach for determining $E_a$ for a reaction involves the measurement of $k$ at two or more different temperatures and using an alternate version of the Arrhenius equation that takes the form of a linear equation</p>
+<p>[
+\ln k = \left(-\frac{E_a}{R}\right) \left(\frac{1}{T}\right) + \ln A
+]</p>
+<p>[
+y = mx + b
+]</p>
+<p>A plot of $\ln k$ versus $\frac{1}{T}$ is linear with a slope equal to $-\frac{E_a}{R}$ and a y-intercept equal to $\ln A$.</p>
+<h2 id="example-1713-determination-of-e_a">Example 17.13 Determination of $E_a$</h2>
+<p>The variation of the rate constant with temperature for the decomposition of HI(g) to H$_2$(g) and I$_2$(g) is given here. What is the activation energy for the reaction?</p>
+<p>[
+2 \text{HI}(g) \rightarrow \text{H}_2(g) + \text{I}_2(g)
+]</p>
+<table>
+<thead>
+<tr>
+<th>T (K)</th>
+<th>$k$ (L/mol/s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>555</td>
+<td>$3.52 \times 10^{-7}$</td>
+</tr>
+<tr>
+<td>575</td>
+<td>$1.22 \times 10^{-6}$</td>
+</tr>
+<tr>
+<td>645</td>
+<td>$8.59 \times 10^{-5}$</td>
+</tr>
+<tr>
+<td>700</td>
+<td>$1.16 \times 10^{-3}$</td>
+</tr>
+<tr>
+<td>781</td>
+<td>$3.95 \times 10^{-2}$</td>
+</tr>
+</tbody>
+</table>
+<p>Solution: Use the provided data to derive values of $\frac{1}{T}$ and $\ln k$:</p>
+<table>
+<thead>
+<tr>
+<th>$\frac{1}{T}$ (K$^{-1}$)</th>
+<th>$\ln k$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$1.80 \times 10^{-3}$</td>
+<td>-14.860</td>
+</tr>
+<tr>
+<td>$1.74 \times 10^{-3}$</td>
+<td>-13.617</td>
+</tr>
+<tr>
+<td>$1.55 \times 10^{-3}$</td>
+<td>-9.362</td>
+</tr>
+<tr>
+<td>$1.43 \times 10^{-3}$</td>
+<td>-6.759</td>
+</tr>
+<tr>
+<td>$1.28 \times 10^{-3}$</td>
+<td>-3.231</td>
+</tr>
+</tbody>
+</table>
+<p>In practice, the equation of the line (slope and y-intercept) that best fits these plotted data points would be derived using a statistical process called regression. This is helpful for most experimental data because a perfect fit of each data point with the line is rarely encountered. For the data here, the fit is nearly perfect and the slope may be estimated using any two of the provided data pairs. Using the first and last data points permits estimation of the slope.</p>
+<p>[
+\text{Slope} = \frac{\Delta (\ln k)}{\Delta \left(\frac{1}{T}\right)} = \frac{(-14.860) - (-3.231)}{(1.80 \times 10^{-3} \text{K}^{-1}) - (1.28 \times 10^{-3} \text{K}^{-1})} = \frac{-11.629}{0.52 \times 10^{-3} \text{K}^{-1}} = -2.2 \times 10^{4} \text{K}
+]</p>
+<p>[
+= -\frac{E_a}{R}
+]</p>
+<p>[
+E_a = -\text{slope} \times R = -(-2.2 \times 10^{4} \text{K} \times 8.314 \text{J mol}^{-1} \text{K}^{-1}) = 1.8 \times 10^{5} \text{J mol}^{-1} \text{ or } 180 \text{kJ mol}^{-1}
+]</p>
+<h3 id="alternative-approach">Alternative approach:</h3>
+<p>A more expedient approach involves deriving activation energy from measurements of the rate constant at just two temperatures. In this approach, the Arrhenius equation is rearranged to a convenient two-point form:</p>
+<p>[
+\ln \frac{k_1}{k_2} = \frac{E_a}{R} \left(\frac{1}{T_2} - \frac{1}{T_1}\right)
+]</p>
+<p>Rearranging this equation to isolate activation energy yields:</p>
+<p>[
+E_a = -R \left(\frac{\ln k_2 - \ln k_1}{\frac{1}{T_2} - \frac{1}{T_1}}\right)
+]</p>
+<p>Any two data pairs may be substituted into this equation—for example, the first and last entries from the above data table:</p>
+<p>[
+E_a = -8.314 \text{J mol}^{-1} \text{K}^{-1} \left(\frac{-3.231 - (-14.860)}{1.28 \times 10^{-3} \text{K}^{-1} - 1.80 \times 10^{-3} \text{K}^{-1}}\right)
+]</p>
+<p>and the result is $E_a = 1.8 \times 10^{5}$ J mol$^{-1}$ or 180 kJ mol$^{-1}$.</p>
+<p>This approach yields the same result as the more rigorous graphical approach used above, as expected. In practice, the graphical approach typically provides more reliable results when working with actual experimental data.</p>
+<h2 id="check-your-learning">Check Your Learning</h2>
+<p>The rate constant for the rate of decomposition of N$_2$O$_5$ to NO and O$_2$ in the gas phase is 1.66 L/mol/s at 650 K and 7.39 L/mol/s at 700 K:</p>
+<p>[
+2 \text{N}_2\text{O}_5(g) \rightarrow 4 \text{NO}(g) + 3 \text{O}_2(g)
+]</p>
+<p>Assuming the kinetics of this reaction are consistent with the Arrhenius equation, calculate the activation energy for this decomposition.</p>
+<p><strong>Answer:</strong> $1.1 \times 10^{5}$ J mol$^{-1}$ or 110 kJ mol$^{-1}$</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
