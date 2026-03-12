@@ -1,6 +1,6 @@
 # Chemistry I & II Tutor Bot Knowledge Base
 
-**University of Massachusetts Lowell
+**University of Massachusetts Lowell**
 
 ```bash
 git clone https://github.com/Undergraduate-Chemistry-KSC-UML/Chem_Tutor_Bot_Knowledge_Base.git
