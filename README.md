@@ -1,4 +1,8 @@
-# Chemistry I & II Tutor Bot Instructional Material Host
+# Chemistry I & II Tutor Bot Knowledge Base
+
+## University of Massachusetts Lowell
+
+git clone https://github.com/Undergraduate-Chemistry-KSC-UML/Chem_Tutor_Bot_Knowledge_Base.git
 
 This repository contains the chemistry instructional content used by the Chemistry I & II Tutor Bot developed by the Kennedy College of Sciences at The University of Massachusetts Lowell.
 
