@@ -34,7 +34,7 @@ if [[ -e "$raw_site_sheet" ]]; then
 fi
 
 echo "Staging source, generated site output, and deploy script..."
-git add mkdocs.yml "$sheet_source" site scripts/deploy_chem1_sheet.sh
+git add mkdocs.yml docs/index.md "$sheet_source" site scripts/deploy_chem1_sheet.sh
 
 if git diff --cached --quiet; then
   echo "No staged changes to commit."
