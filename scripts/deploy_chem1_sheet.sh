@@ -33,8 +33,8 @@ if [[ -e "$raw_site_sheet" ]]; then
   exit 1
 fi
 
-echo "Staging CHEM1 sheet source, generated site output, and deploy script..."
-git add "$sheet_source" site scripts/deploy_chem1_sheet.sh
+echo "Staging source, generated site output, and deploy script..."
+git add mkdocs.yml "$sheet_source" site scripts/deploy_chem1_sheet.sh
 
 if git diff --cached --quiet; then
   echo "No staged changes to commit."
@@ -46,4 +46,8 @@ fi
 echo "Pushing to origin/main..."
 git push origin main
 
-echo "Done. GitHub Pages may take a minute or two to refresh."
+echo "Deploying rendered site to GitHub Pages..."
+mkdocs gh-deploy --clean --remote-name origin --remote-branch gh-pages --force
+
+echo "Done. GitHub Pages may take a minute or two to refresh:"
+echo "https://undergraduate-chemistry-ksc-uml.github.io/Chem_Tutor_Bot_Knowledge_Base/"

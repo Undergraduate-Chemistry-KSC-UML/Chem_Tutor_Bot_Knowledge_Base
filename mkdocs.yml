@@ -1,4 +1,5 @@
 site_name: Chem Tutor Bot Knowledge Base
+site_url: https://undergraduate-chemistry-ksc-uml.github.io/Chem_Tutor_Bot_Knowledge_Base/
 
 theme:
   name: material
