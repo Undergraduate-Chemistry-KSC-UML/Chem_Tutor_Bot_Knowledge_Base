@@ -14,50 +14,53 @@ fi
 echo "Building MkDocs site..."
 mkdocs build
 
-sheet_sources=(
+required_sources=(
+  "docs/Molecular_Geometry.md"
   "docs/CHEM1 /CHEM1_SHEET.md"
   "docs/CHEM2/CHEM2_SHEET.md"
 )
 
-sheet_pages=(
+required_pages=(
+  "site/Molecular_Geometry/index.html"
   "site/CHEM1 /CHEM1_SHEET/index.html"
   "site/CHEM2/CHEM2_SHEET/index.html"
 )
 
-raw_site_sheets=(
+raw_site_markdown=(
+  "site/Molecular_Geometry.md"
   "site/CHEM1 /CHEM1_SHEET.md"
   "site/CHEM2/CHEM2_SHEET.md"
 )
 
-for sheet_source in "${sheet_sources[@]}"; do
-  if [[ ! -f "$sheet_source" ]]; then
-    echo "Missing source sheet: $sheet_source" >&2
+for required_source in "${required_sources[@]}"; do
+  if [[ ! -f "$required_source" ]]; then
+    echo "Missing source page: $required_source" >&2
     exit 1
   fi
 done
 
-for sheet_page in "${sheet_pages[@]}"; do
-  if [[ ! -f "$sheet_page" ]]; then
-    echo "MkDocs did not generate expected page: $sheet_page" >&2
+for required_page in "${required_pages[@]}"; do
+  if [[ ! -f "$required_page" ]]; then
+    echo "MkDocs did not generate expected page: $required_page" >&2
     exit 1
   fi
 done
 
-for raw_site_sheet in "${raw_site_sheets[@]}"; do
-  if [[ -e "$raw_site_sheet" ]]; then
-    echo "Unexpected raw Markdown remained in site output: $raw_site_sheet" >&2
+for raw_site_file in "${raw_site_markdown[@]}"; do
+  if [[ -e "$raw_site_file" ]]; then
+    echo "Unexpected raw Markdown remained in site output: $raw_site_file" >&2
     exit 1
   fi
 done
 
 echo "Staging source, generated site output, and deploy script..."
-git add mkdocs.yml docs/index.md "${sheet_sources[@]}" site scripts/deploy_chem1_sheet.sh
+git add mkdocs.yml docs/index.md "${required_sources[@]}" site scripts/deploy_chem1_sheet.sh
 
 if git diff --cached --quiet; then
   echo "No staged changes to commit."
 else
   echo "Creating commit..."
-  git commit -m "Render chemistry sheet pages"
+  git commit -m "Render instructional material pages"
 fi
 
 echo "Pushing to origin/main..."

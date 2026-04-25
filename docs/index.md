@@ -2,6 +2,10 @@
 
 This site contains instructional chemistry materials.
 
+## References
+
+- [Molecular Geometry](Molecular_Geometry.md)
+
 ## CHEM1
 
 - [CHEM1 Sheet](CHEM1 /CHEM1_SHEET.md)
