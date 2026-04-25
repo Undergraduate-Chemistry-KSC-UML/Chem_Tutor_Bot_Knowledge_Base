@@ -14,8 +14,9 @@ fi
 echo "Building MkDocs site..."
 mkdocs build
 
-required_sources=(
+required_files=(
   "docs/Molecular_Geometry.md"
+  "docs/molecular_geometry_vsepr_table.png"
   "docs/CHEM1 /CHEM1_SHEET.md"
   "docs/CHEM2/CHEM2_SHEET.md"
 )
@@ -32,9 +33,9 @@ raw_site_markdown=(
   "site/CHEM2/CHEM2_SHEET.md"
 )
 
-for required_source in "${required_sources[@]}"; do
-  if [[ ! -f "$required_source" ]]; then
-    echo "Missing source page: $required_source" >&2
+for required_file in "${required_files[@]}"; do
+  if [[ ! -f "$required_file" ]]; then
+    echo "Missing required file: $required_file" >&2
     exit 1
   fi
 done
@@ -54,7 +55,7 @@ for raw_site_file in "${raw_site_markdown[@]}"; do
 done
 
 echo "Staging source, generated site output, and deploy script..."
-git add mkdocs.yml docs/index.md "${required_sources[@]}" site scripts/deploy_chem1_sheet.sh
+git add mkdocs.yml docs/index.md "${required_files[@]}" site scripts/deploy_chem1_sheet.sh
 
 if git diff --cached --quiet; then
   echo "No staged changes to commit."
