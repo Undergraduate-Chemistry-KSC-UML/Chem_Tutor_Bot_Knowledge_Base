@@ -1,8 +1,8 @@
 ---
-title: CHEM1_CHEAT_SHEET
+title: CHEM1 Cheat Sheet
 ---
 
-# CHEM1_CHEAT_SHEET
+# CHEM1 Cheat Sheet
 
 | Quantity               | Value                                  |
 |-----------------------|----------------------------------------|
