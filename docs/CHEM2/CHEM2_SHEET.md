@@ -1,8 +1,8 @@
 ---
-title: CHEM2 Sheet
+title: CHEM2_CHEAT_SHEET
 ---
 
-# CHEM 1220 Equations
+# CHEM2_CHEAT_SHEET
 
 $q = mC_s\Delta T$
 

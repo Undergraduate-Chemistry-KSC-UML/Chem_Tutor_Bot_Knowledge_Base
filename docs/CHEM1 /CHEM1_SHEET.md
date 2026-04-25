@@ -1,8 +1,8 @@
 ---
-title: CHEM1 Sheet
+title: CHEM1_CHEAT_SHEET
 ---
 
-# Fundamental Constants
+# CHEM1_CHEAT_SHEET
 
 | Quantity               | Value                                  |
 |-----------------------|----------------------------------------|
