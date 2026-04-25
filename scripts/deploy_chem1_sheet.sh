@@ -16,7 +16,9 @@ mkdocs build
 
 required_files=(
   "docs/CHEM1 /Molecular_Geometry.md"
+  "docs/CHEM1 /Periodic_Table.md"
   "docs/CHEM2/Molecular_Geometry.md"
+  "docs/CHEM2/Periodic_Table.md"
   "docs/molecular_geometry_vsepr_table.png"
   "docs/CHEM1 /CHEM1_SHEET.md"
   "docs/CHEM2/CHEM2_SHEET.md"
@@ -24,20 +26,25 @@ required_files=(
 
 required_pages=(
   "site/CHEM1 /Molecular_Geometry/index.html"
+  "site/CHEM1 /Periodic_Table/index.html"
   "site/CHEM2/Molecular_Geometry/index.html"
+  "site/CHEM2/Periodic_Table/index.html"
   "site/CHEM1 /CHEM1_SHEET/index.html"
   "site/CHEM2/CHEM2_SHEET/index.html"
 )
 
 raw_site_markdown=(
   "site/CHEM1 /Molecular_Geometry.md"
+  "site/CHEM1 /Periodic_Table.md"
   "site/CHEM2/Molecular_Geometry.md"
+  "site/CHEM2/Periodic_Table.md"
   "site/CHEM1 /CHEM1_SHEET.md"
   "site/CHEM2/CHEM2_SHEET.md"
 )
 
 obsolete_pages=(
   "site/Molecular_Geometry/index.html"
+  "site/Periodic_Table/index.html"
 )
 
 for required_file in "${required_files[@]}"; do
