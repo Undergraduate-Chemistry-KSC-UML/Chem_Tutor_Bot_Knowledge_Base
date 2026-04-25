@@ -15,22 +15,29 @@ echo "Building MkDocs site..."
 mkdocs build
 
 required_files=(
-  "docs/Molecular_Geometry.md"
+  "docs/CHEM1 /Molecular_Geometry.md"
+  "docs/CHEM2/Molecular_Geometry.md"
   "docs/molecular_geometry_vsepr_table.png"
   "docs/CHEM1 /CHEM1_SHEET.md"
   "docs/CHEM2/CHEM2_SHEET.md"
 )
 
 required_pages=(
-  "site/Molecular_Geometry/index.html"
+  "site/CHEM1 /Molecular_Geometry/index.html"
+  "site/CHEM2/Molecular_Geometry/index.html"
   "site/CHEM1 /CHEM1_SHEET/index.html"
   "site/CHEM2/CHEM2_SHEET/index.html"
 )
 
 raw_site_markdown=(
-  "site/Molecular_Geometry.md"
+  "site/CHEM1 /Molecular_Geometry.md"
+  "site/CHEM2/Molecular_Geometry.md"
   "site/CHEM1 /CHEM1_SHEET.md"
   "site/CHEM2/CHEM2_SHEET.md"
+)
+
+obsolete_pages=(
+  "site/Molecular_Geometry/index.html"
 )
 
 for required_file in "${required_files[@]}"; do
@@ -50,6 +57,13 @@ done
 for raw_site_file in "${raw_site_markdown[@]}"; do
   if [[ -e "$raw_site_file" ]]; then
     echo "Unexpected raw Markdown remained in site output: $raw_site_file" >&2
+    exit 1
+  fi
+done
+
+for obsolete_page in "${obsolete_pages[@]}"; do
+  if [[ -e "$obsolete_page" ]]; then
+    echo "Obsolete generated page still exists: $obsolete_page" >&2
     exit 1
   fi
 done

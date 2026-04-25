@@ -10,7 +10,7 @@ Do not draw molecular geometry. Give a brief word description, then say: "Look a
 
 Visual reference: VSEPR molecular geometry table.
 
-![VSEPR molecular geometry image table](molecular_geometry_vsepr_table.png)
+![VSEPR molecular geometry image table](../molecular_geometry_vsepr_table.png)
 
 ## Core Rules
 
