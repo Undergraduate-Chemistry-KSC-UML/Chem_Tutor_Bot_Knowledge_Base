@@ -17,19 +17,6 @@ It provides:
 - a MkDocs site that publishes the material for human reading and retrieval workflows
 - the Copilot agent prompt in `copilotagent.md`
 
-## Connected Obsidian Nodes
-
-The Obsidian project hub is `Project-Chem-Tutor-Bot`.
-
-Its connected nodes are:
-
-- `Project-Chem-Tutor-Bot-prompt-guardrails`
-- `Project-Chem-Tutor-Bot-knowledge-base-map`
-- `Project-Chem-Tutor-Bot-feedback-fixes`
-- `Project-Chem-Tutor-Bot-update-cheatsheet`
-
-Use those notes as the project memory for the bot's guardrails, knowledge-base routing, feedback fixes, and update workflow.
-
 ## Repository Structure
 
 ```text
@@ -77,6 +64,58 @@ The agent should:
 7. guide problem solving without giving final answers
 8. validate student-provided answers as correct or incorrect
 9. run consistency checks before accepting student answers
+
+## Microsoft 365 Copilot Studio and RAG
+
+The Chemistry Tutor Bot is intended to run as a Microsoft 365 Copilot Studio agent that uses retrieval-augmented generation, or RAG.
+
+At a high level, the system has two parts:
+
+- `copilotagent.md` is the behavior layer. It tells the agent how to act, what to refuse, when to ask for the course, how to route lookup questions, and how to tutor without giving final answers.
+- This repository's Markdown files are the knowledge layer. They provide the approved Chemistry I and Chemistry II content that Copilot Studio retrieves from when a student asks a chemistry question.
+
+In Copilot Studio, the published knowledge base is connected as a knowledge source. When a student asks a question, Copilot Studio searches the indexed course material, retrieves the most relevant passages, and supplies those passages to the model along with the agent instructions. The prompt then controls how the model may use the retrieved content.
+
+The prompt is deliberately strict because RAG alone does not guarantee correct tutoring behavior. The retrieved content can provide facts, formulas, and explanations, but the prompt enforces the operating rules:
+
+- reject non-chemistry requests before course gating
+- ask the exact course gate when the course is unknown
+- keep Chemistry I students inside Chemistry I material
+- prefer Chemistry II references when a Chemistry II student asks a course-specific question
+- answer direct lookup questions from cheat sheets and periodic tables
+- guide multi-step problem solving without giving final answers
+- validate student-provided answers and run sanity checks
+- avoid outside knowledge, outside links, calculators, diagrams, and unsupported claims
+
+The prompt and the knowledge base should be treated as a pair. If the prompt is changed without testing against the knowledge base, the bot may retrieve the right material but use it in the wrong way. If the knowledge base changes without updating the prompt or README, future maintainers may not know how the bot is expected to route or constrain that material.
+
+## Prompt Development and Testing
+
+The prompt in `copilotagent.md` was built through multiple rounds of real bot testing, not as a one-shot instruction block.
+
+The repeatable process is:
+
+1. Write a working prompt with clear scope, course routing, lookup behavior, answer-giving limits, and validation rules.
+2. Test the bot in Microsoft 365 Copilot Studio with realistic student questions.
+3. Have a chemistry TA or professor review the bot's behavior because they can identify chemistry mistakes, tutoring-quality issues, and cases where the model sounds plausible but is wrong.
+4. Record failures as prompt or knowledge-base issues. Examples include using outside knowledge, giving final answers, missing course gating, mishandling particle masses, drawing molecular geometry, or accepting inconsistent answers.
+5. Revise the prompt or knowledge-base files from the computer-science side.
+6. Retest with domain reviewers until the bot behaves consistently across the major scenarios.
+
+Microsoft 365 Copilot Studio's testing suite was also used for bulk evaluation. Large test batches, often around 100 scenarios per run, helped show how the agent scored across repeated cases and which prompt rules were still weak. Bulk tests are useful for coverage, but they do not replace expert review. The best results came from combining automated scenario scoring with TA and professor feedback.
+
+For future reproduction, test at least these categories:
+
+- non-chemistry requests
+- chemistry requests before course identification
+- Chemistry I versus Chemistry II routing
+- cheat-sheet lookups
+- periodic-table lookups
+- particle-mass questions
+- molecular-geometry questions
+- multi-step problem tutoring
+- student answer validation
+- sanity-check failures such as inconsistent related values
 
 ## High-Priority Reference Routing
 
@@ -157,7 +196,7 @@ When changing course material or bot behavior:
 4. Update `copilotagent.md` only when the deployed Copilot prompt changes.
 5. Preview with `mkdocs serve`.
 6. Build with `mkdocs build` before publishing site output.
-7. Update the connected Obsidian notes if routing, scope, or feedback behavior changes.
+7. Retest the agent in Copilot Studio after prompt or knowledge-base changes.
 
 ## Prompt
 
