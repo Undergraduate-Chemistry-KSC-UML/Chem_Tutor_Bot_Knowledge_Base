@@ -16,6 +16,7 @@ It provides:
 - course learning objectives for study planning and practice selection
 - a MkDocs site that publishes the material for human reading and retrieval workflows
 - the Copilot agent prompt in `copilotagent.md`
+- a reproducible workflow for building, hosting, prompting, and testing the tutor bot
 
 ## Repository Structure
 
@@ -49,6 +50,44 @@ It provides:
 
 Note: the current Chemistry I directory is named `docs/CHEM1 /` with a trailing space. Keep this in mind when linking to files or working from a terminal.
 
+## How This System Was Built
+
+The full system was built as a pipeline from textbook content to a hosted RAG knowledge source to a tested Microsoft 365 Copilot Studio agent.
+
+1. Start with the source textbook.
+
+   The main source text is the OpenStax online textbook [Chemistry: Atoms First 2e](https://openstax.org/books/chemistry-atoms-first-2e/pages/1-introduction). Work chapter by chapter and section by section so the resulting Markdown files stay small enough for retrieval and easy to audit. Follow the applicable OpenStax attribution, licensing, and usage requirements when reusing or publishing material.
+
+2. Convert textbook text to Markdown.
+
+   Use the separate Markdown Converter app repository:
+
+   ```text
+   https://github.com/Undergraduate-Chemistry-KSC-UML/Markdown_Converter_For_Instructional_Material
+   ```
+
+   That app is a Streamlit tool that uses the OpenAI API to turn copied textbook text into clean Markdown. The workflow is to paste raw textbook text into the app, choose an output filename, run the converter, and download the generated `.md` file.
+
+   The converter sends the raw text to an LLM with a strict formatting prompt. It removes non-instructional content such as figure references, captions, "Link to Learning" sections, "Portrait of a Chemist" sections, "How Sciences Interconnect" sections, and "Chemistry in Everyday Life" sections. It preserves the instructional text without summarizing or rewriting it, formats headings with Markdown hierarchy, formats math with LaTeX, and outputs Markdown ready for documentation sites or AI retrieval systems.
+
+3. Organize the converted content in this repository.
+
+   Put each converted Markdown file into the correct course and chapter folder under `docs/`. Keep one file focused on one section or topic whenever possible. Store formulas, constants, conversions, solubility rules, particle masses, and periodic-table values in the appropriate high-priority reference files instead of burying them only inside chapter prose.
+
+   After adding files, check that course material is ordered consistently by course, chapter, and section. This organization matters because Copilot Studio retrieval works better when files are small, clearly named, and grouped by the same structure that a course uses.
+
+4. Host the knowledge base.
+
+   This repository uses MkDocs to render the Markdown files as a static site. GitHub Pages hosts that site so Microsoft 365 Copilot Studio can use it as the agent's retrieval source. When automated deployment is enabled, GitHub Actions or the repository's Pages deployment flow should build and publish the MkDocs output. The hosted site is what makes the Markdown material available to the RAG workflow.
+
+5. Configure the Copilot Studio agent.
+
+   Add the hosted knowledge-base site as the Copilot Studio knowledge source. Add the instructions from `copilotagent.md` as the agent prompt. Disable alternative browsing, broad web search, and unrelated knowledge sources so the agent retrieves only from this hosted course site and follows the approved prompt rules.
+
+6. Test, revise, and retest.
+
+   Use Copilot Studio's testing tools, TA/professor review, and realistic student scenarios to check whether the prompt and hosted knowledge base are working together. Fix either the prompt or the knowledge-base files depending on the failure mode, then repeat the test cycle.
+
 ## How The Bot Uses The Knowledge Base
 
 The prompt in `copilotagent.md` controls the Copilot agent behavior.
@@ -75,6 +114,8 @@ At a high level, the system has two parts:
 - This repository's Markdown files are the knowledge layer. They provide the approved Chemistry I and Chemistry II content that Copilot Studio retrieves from when a student asks a chemistry question.
 
 In Copilot Studio, the published knowledge base is connected as a knowledge source. When a student asks a question, Copilot Studio searches the indexed course material, retrieves the most relevant passages, and supplies those passages to the model along with the agent instructions. The prompt then controls how the model may use the retrieved content.
+
+The Copilot Studio agent should be configured so this hosted knowledge-base site is its only searchable course source. Alternative web browsing, general web search, or unrelated knowledge sources should be disabled for the tutor. The bot is intentionally source-grounded: if the answer is not in the approved hosted material, the prompt should force the out-of-scope behavior instead of allowing the model to fill gaps from the internet or pretrained knowledge.
 
 The prompt is deliberately strict because RAG alone does not guarantee correct tutoring behavior. The retrieved content can provide facts, formulas, and explanations, but the prompt enforces the operating rules:
 
@@ -190,13 +231,16 @@ pip install mkdocs mkdocs-material mkdocs-awesome-pages-plugin
 
 When changing course material or bot behavior:
 
-1. Edit course content inside `docs/`.
-2. Keep direct lookup facts in the appropriate course sheet, periodic table, or molecular geometry file.
-3. Use learning objectives only for planning and practice selection.
-4. Update `copilotagent.md` only when the deployed Copilot prompt changes.
-5. Preview with `mkdocs serve`.
-6. Build with `mkdocs build` before publishing site output.
-7. Retest the agent in Copilot Studio after prompt or knowledge-base changes.
+1. Pull source content from the OpenStax textbook or another approved instructional source.
+2. Convert raw source text to Markdown with the Markdown Converter app when needed.
+3. Edit or add course content inside `docs/`.
+4. Keep direct lookup facts in the appropriate course sheet, periodic table, or molecular geometry file.
+5. Use learning objectives only for planning and practice selection.
+6. Preview with `mkdocs serve`.
+7. Build with `mkdocs build` before publishing site output.
+8. Verify the hosted GitHub Pages site reflects the new content.
+9. Update `copilotagent.md` only when the deployed Copilot prompt changes.
+10. Retest the agent in Copilot Studio after prompt or knowledge-base changes.
 
 ## Prompt
 
