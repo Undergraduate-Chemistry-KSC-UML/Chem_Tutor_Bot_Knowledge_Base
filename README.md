@@ -245,3 +245,8 @@ When changing course material or bot behavior:
 ## Prompt
 
 `copilotagent.md` contains the exact Microsoft 365 Copilot agent prompt for the Chemistry Tutor Bot. Keep it copy-paste faithful to the deployed prompt.
+
+## Future Edits
+
+1. Within the textbook, there is also a page full of practice problems for each chapter and subject subchapter, so it could be beneficial to add some of these practice problems to the host site
+2. It could also be beneficial to add more backlinks between corresponding topics and chapters and subchapters to make the RAG system more efficient. The amount of backlinks and the frequency of backlinks per page could vary per context
